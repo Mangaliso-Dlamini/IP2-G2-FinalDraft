@@ -52,7 +52,7 @@ $(document).ready(function(){
       hideLoadingSpinner();
     });
 
-    var url_categories = 'http://api.adzuna.com/v1/api/jobs/'+localStorage.getItem("country")+'/categories?app_id=a7e5c3d9&app_key=428f183310907a46c65123bd4c151028&&content-type=application/json'
+    var url_categories = 'https://api.adzuna.com/v1/api/jobs/'+localStorage.getItem("country")+'/categories?app_id=a7e5c3d9&app_key=428f183310907a46c65123bd4c151028&&content-type=application/json'
     $.getJSON(url_categories)
     .done(function(data) {
       
@@ -115,7 +115,7 @@ $(document).ready(function(){
     document.getElementById("visualisation").style.display= "block";
     
     //Loads the top companies
-    var url_top_companies = 'http://api.adzuna.com/v1/api/jobs/'+localStorage.getItem("country")+'/top_companies?app_id=a7e5c3d9&app_key=428f183310907a46c65123bd4c151028&what='+localStorage.getItem("category")+'&content-type=application/json'
+    var url_top_companies = 'https://api.adzuna.com/v1/api/jobs/'+localStorage.getItem("country")+'/top_companies?app_id=a7e5c3d9&app_key=428f183310907a46c65123bd4c151028&what='+localStorage.getItem("category")+'&content-type=application/json'
         $.getJSON(url_top_companies)
         .done(function(data) {
 
@@ -156,7 +156,7 @@ $(document).ready(function(){
 
     //Loads the salary distribution
     var location_arr = localStorage.getItem("location").split(",");
-    var url_sal_distro = 'http://api.adzuna.com/v1/api/jobs/'+localStorage.getItem("country")+'/histogram?app_id=a7e5c3d9&app_key=428f183310907a46c65123bd4c151028&location0='+location_arr[0]+'&location1='+location_arr[1]+'&what='+localStorage.getItem("category")+'&content-type=application/json'
+    var url_sal_distro = 'https://api.adzuna.com/v1/api/jobs/'+localStorage.getItem("country")+'/histogram?app_id=a7e5c3d9&app_key=428f183310907a46c65123bd4c151028&location0='+location_arr[0]+'&location1='+location_arr[1]+'&what='+localStorage.getItem("category")+'&content-type=application/json'
     $.getJSON(url_sal_distro) 
     .done(function(data) {
 
@@ -217,7 +217,7 @@ $(document).ready(function(){
     });
 
     //Loads the salary history
-    var url_sal_history = 'http://api.adzuna.com/v1/api/jobs/'+localStorage.getItem("country")+'/history?app_id=a7e5c3d9&app_key=428f183310907a46c65123bd4c151028&location0='+location_arr[0]+'&location1='+location_arr[1]+'&category='+localStorage.getItem("category")+'&content-type=application/json'
+    var url_sal_history = 'https://api.adzuna.com/v1/api/jobs/'+localStorage.getItem("country")+'/history?app_id=a7e5c3d9&app_key=428f183310907a46c65123bd4c151028&location0='+location_arr[0]+'&location1='+location_arr[1]+'&category='+localStorage.getItem("category")+'&content-type=application/json'
     $.getJSON(url_sal_history)
     .done(function(data) {
 
